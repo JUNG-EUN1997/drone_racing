@@ -1,4 +1,4 @@
-body{margin: 0;padding: 0;box-sizing: border-box; font-family:'NanumGothic', sans-serif; width: 100vw; overflow-x: hidden;}
+body{margin: 0;padding: 0;box-sizing: border-box; font-family:'NanumGothic', sans-serif; width: 100vw;}
 button,input,select,textarea{font-family:'NanumGothic', sans-serif; outline: none;}
 .dis-table,
 .dis-table-row{display: table;width:100%;border-spacing: 0; border-collapse: collapse;}
@@ -42,4 +42,4 @@ table{border-spacing: 0; border-collapse: collapse;}
 input:-moz-read-only {background-color: #eaeaea;}/* For Firefox */
 input[readonly='readonly'] {background-color: #eaeaea;}/* For IE */
 input:read-only {background-color: #eaeaea;}
-.w-main{width: 1200px; margin: auto;}
+.w-main{width:95%; max-width: 1200px; margin: auto;}

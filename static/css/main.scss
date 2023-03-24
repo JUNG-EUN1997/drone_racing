@@ -1,6 +1,13 @@
+$main_btn_bgColor: #2d4fbd;
+$main_btn_color: #ffffff;
+$main_btn_hover_bgColor: #183594;
+$main_btn_hover_color: #ffffff;
+
+html { font-size: 62.5%; }
+
 h1{
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2.6rem;
     margin: 4vw 0 1.5vw 0;
 }
 h1.more{
@@ -8,7 +15,20 @@ h1.more{
     justify-content: space-between;
     a{
         font-weight: 400;
-        font-size: 0.975vw;
+        font-size: 1.4rem;
+    }
+}
+
+.btn{
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: $main_btn_bgColor;
+    color: $main_btn_color;
+    border: none;
+    transition: .3s;
+    &:hover{
+        background: $main_btn_hover_bgColor;
+        color: $main_btn_hover_color;
     }
 }
 
@@ -36,6 +56,7 @@ h1.more{
             display: flex;
             align-items: center;
             justify-content: right;
+            font-size: 1.4rem;
             li{
                 margin-right: 12px;
                 &:last-child{
@@ -63,7 +84,7 @@ h1.more{
     color: #ffffff;
     .banner_area{
         h2{
-            font-size: 3vw;
+            font-size: 5.6rem;
             font-weight: bold;
             transform: skew(358deg);
             margin-bottom: 3vw;
@@ -82,7 +103,7 @@ h1.more{
                     margin-right: 8px;
                     
                     h4{
-                        font-size: 1.3vw;
+                        font-size: 2.4rem;
                         font-weight: 600;
                         margin-top: 2px;
                     }
@@ -95,7 +116,7 @@ h1.more{
             }
             div{
                 margin-left: 1vw;
-                font-size: 1.2vw;
+                font-size: 2.4rem;
                 line-height: 1.3;
             }
         }
@@ -109,6 +130,7 @@ h1.more{
         display: flex;
         padding: 2vw 1vw;
         align-items: center;
+        font-size: 1.6rem;
         h2{
             margin-right: 1vw;
             font-weight: bold;
@@ -127,13 +149,8 @@ h1.more{
 
 .race_schedule_wrap{
     .swiper-container{
+        overflow: hidden;
         .swiper-slide{
-            text-align: center;
-            background: center no-repeat;
-            background-size: cover;
-            position: relative;
-            color: #ffffff;
-            padding: 2vw 0;
             &::before{
                 content: '';
                 background-color: rgba(0,0,0,0.5);
@@ -156,20 +173,68 @@ h1.more{
             &.type4{
                 background-image: url('../images/img_schedule_4.jpg');
             }
+
+            text-align: center;
+            background: center no-repeat;
+            background-size: cover;
+            position: relative;
+            color: #ffffff;
+            padding: 6vw 0;
+            h5{
+                font-size: 1.4rem;
+                position: absolute;
+                top: 3vw;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .content{
+                font-size: 1.4rem;
+                h4{
+                    font-size: 2.8rem;
+                    font-weight: bold;
+                    margin-bottom: 0.5vw;
+                }
+            }
+            .btn_area{
+                position: absolute;
+                bottom: 3vw;
+                left: 50%;
+                transform: translateX(-50%);
+                a{
+                    color: #000000;
+                    background-color: #ffffff;
+                    padding: 0.5vw 2vw;
+                    display: inline-block;
+                    font-size: 1.2rem;
+                    border-radius: 0.4rem;
+                }
+            }
         }
     }
 }
 
 .video_wrap{
     margin: 4vw 0;
-    iframe{
+    .video{
         margin-bottom: 2vw;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        iframe{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
     }
+    
 }
 
 .partner_wrap{
     background-color: #e8e8f5;
-    padding: 1vw 0;
+    padding: 1vw 0 3vw 0;
     .partner_content{
         display: grid;
         grid-template-columns: repeat(7,1fr);
@@ -187,6 +252,51 @@ h1.more{
         img{
             max-height: 70px;
         }
-        
     }
+    .btn_are{
+        margin-top: 1vw;
+    }
+}
+
+.footer{
+    background: #6f7375;
+    padding: 2vw 0;
+    font-size: 1.2rem;
+    color: #e8e8f5;
+
+    @mixin footer_thing {
+        margin-bottom: 1vw;
+        display: flex;
+        *{
+            border-right: 1px solid #acacad;
+            margin-right: 8px;
+            padding-right: 8px;
+            &:last-child{
+                border-right: 0;
+            }
+        }
+    }
+
+    a{
+        color: #e8e8f5;
+    }
+    .href_area{
+        @include footer_thing;
+        border-bottom: 1px solid #acacad;
+        padding-bottom: 1vw;
+    }
+    .info{
+        @include footer_thing;
+    }
+    .copy{
+        color: #aaa;
+    }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    
 }

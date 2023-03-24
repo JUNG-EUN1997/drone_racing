@@ -7,7 +7,7 @@ new Swiper('.js-news_swiper', {
     loop: true // 반복 재생 여부
 })
 
-new Swiper('.js-schedule_swiper', {
+const swiper = new Swiper('.js-schedule_swiper', {
     slidesPerView: 3,
     spaceBetween: 30,
     autoplay: true, // 자동 재생 여부
@@ -20,3 +20,9 @@ new Swiper('.js-partners_swiper', {
     autoplay: true, // 자동 재생 여부
     loop: true
 })
+
+$('.swiper-slide').hover(function () {
+    swiper.autoplay.stop();
+}, function () {
+    swiper.autoplay.start();
+});
