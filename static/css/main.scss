@@ -37,8 +37,11 @@ h1.more{
 
 // nav
 .menu_wrap{
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
     border-bottom: 1px solid #efefef;
+    z-index: 10;
     .menu_area{
         display: flex;
         justify-content: space-between;
@@ -84,11 +87,12 @@ h1.more{
 }
 
 .banner_wrap{
-    height: 70vh;
+    min-height: 70vh;
     background: url('../images/img_banner.jpg') center no-repeat;
     background-size: cover;
     display: flex;
     color: #ffffff;
+    padding-top: 70px;
     .banner_area{
         h2{
             font-size: 5.6rem;
@@ -158,6 +162,13 @@ h1.more{
     .swiper-container{
         overflow: hidden;
         .swiper-slide{
+            text-align: center;
+            background: center no-repeat;
+            background-size: cover;
+            position: relative;
+            color: #ffffff;
+            padding: 6vw 0;
+
             &::before{
                 content: '';
                 background-color: rgba(0,0,0,0.5);
@@ -178,15 +189,14 @@ h1.more{
                 background-image: url('../images/img_schedule_3.jpg');
             }
             &.type4{
-                background-image: url('../images/img_schedule_4.jpg');
+                background-image: url('../images/img_schedule_1.jpg');
             }
-
-            text-align: center;
-            background: center no-repeat;
-            background-size: cover;
-            position: relative;
-            color: #ffffff;
-            padding: 6vw 0;
+            &.type5{
+                background-image: url('../images/img_schedule_2.jpg');
+            }
+            &.type6{
+                background-image: url('../images/img_schedule_3.jpg');
+            }
             h5{
                 font-size: 1.4rem;
                 position: absolute;
@@ -305,6 +315,12 @@ h1.more{
 }
 
 @media (max-width: 768px) {
+    html{
+        font-size: 50%;
+    }
+    h1{
+        margin: 8vw 0 3vw 0;
+    }
     .hamburger {
         width: 40px;
         height: 40px;
@@ -343,18 +359,40 @@ h1.more{
     }
 
     .menu_area{
-        .menu{
-            flex-direction: column;
-            position: absolute;
-            transition: .3s;
-            transform: translateX(-30px);
-            width: 0;
-            top: 0;
-            right: -15%;
-            background-color: #e7eaf3;
-            overflow: hidden;
-            height: 100vh;
-            z-index: 100;
+        .menu_content{
+            .menu{
+                flex-direction: column;
+                position: absolute;
+                transition: .3s;
+                transform: translateX(-30px);
+                width: 0;
+                top: 0;
+                right: -15%;
+                background-color: #e7eaf3;
+                overflow: hidden;
+                height: 100vh;
+                z-index: 100;
+                align-items: normal;
+                .close{
+                    display: block;
+                    text-align: right;
+                    margin: 1.2rem 1.2rem 0 0;
+                    color: #7d8089;
+                    .material-icons{
+                        font-size: 4.2rem;
+                    }
+                }
+                li{
+                    margin-right: 0;
+                    a{
+                        display: block;
+                        border-bottom: 1px solid #aaa;
+                        border-radius: 0;
+                        padding: 3vw 6vw;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
         }
     }
     
@@ -384,23 +422,48 @@ h1.more{
             }
             
             .menu{
-                align-items: normal;
-                right: -3.75%;
+                right: -31px;
                 width: 90vw;
-                .close{
-                    display: block;
-                    text-align: right;
-                    .material-icons{
-                        font-size: 4.2rem;
-                    }
+            }
+        }
+    }
+
+    .banner_wrap{
+        .banner_area{
+            >div{
+                flex-direction: column;
+                margin: 5vw 0;
+                ul{
+                    margin-bottom: 2vw;
                 }
-                li{
+            }
+        }
+    }
+
+    .race_schedule_wrap{
+        .swiper-container{
+            .swiper-slide{
+                padding: 16vw 3vw;
+                .btn_area{
                     a{
-                        display: block;
+                        
                     }
                 }
             }
-            
+        }
+    }
+
+    .video_wrap{
+        margin: 20vw 0;
+    }
+
+    .partner_wrap{
+        .partner_content{
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 1vw;
+        }
+        .btn_are{
+            margin-top: 5vw;
         }
     }
 }

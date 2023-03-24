@@ -50,10 +50,10 @@
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">GALLERY</a></li>
                         <li><a href="#">SPONSORS</a></li>
-                        <li class="lang">
+                        <!-- <li class="lang">
                             <span class="active">KR</span>
                             <span>EN</span>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 
@@ -63,22 +63,29 @@
         <div class="main_wrap">
             <section class="banner_wrap">
                 <div class="w-main banner_area">
-                    <h2>FAI WORLD<br>DRONE RACING<br>CHAMPIONSHIPS 2023<br>In Namwon</h2>
+                    <div style="width:100%;overflow: hidden;">
+                        <h2>FAI WORLD<br>DRONE RACING<br>CHAMPIONSHIPS 2023<br>In Namwon</h2>
+                    </div>
                     <div>
-                        <ul>
+                        <ul class="dday js-dday">
                             <li>
                                 <h5>DAY</h5>
-                                <h4>158</h4>
+                                <h4 id="day">0</h4>
                             </li>
                             <li class="delimiter">:</li>
                             <li>
                                 <h5>HRS</h5>
-                                <h4>23</h4>
+                                <h4 id="hour">0</h4>
                             </li>
                             <li class="delimiter">:</li>
                             <li>
                                 <h5>MINS</h5>
-                                <h4>51</h4>
+                                <h4 id="minute">0</h4>
+                            </li>
+                            <li class="delimiter">:</li>
+                            <li>
+                                <h5>SEC</h5>
+                                <h4 id="second">0</h4>
                             </li>
                         </ul>
                         <div>
