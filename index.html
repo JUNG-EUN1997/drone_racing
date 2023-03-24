@@ -38,16 +38,25 @@
                     <img src="./static/images/logo_fai.png" alt="">
                     <img src="./static/images/logo_namwon.jpg" alt="">
                 </div>
-                <ul class="menu">
-                    <li><a href="#">FAI DRONE</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">SPONSORS</a></li>
-                    <li class="lang">
-                        <span class="active">KR</span>
-                        <span>EN</span>
-                    </li>
-                </ul>
+                <div class="menu_content js-menu_content">
+                    <div class="hamburger" onclick="openNav()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu js-menu">
+                        <li class="only_m close" onclick="closeNav()"><span class="material-icons">close</span></li>
+                        <li><a href="#">FAI DRONE</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">SPONSORS</a></li>
+                        <li class="lang">
+                            <span class="active">KR</span>
+                            <span>EN</span>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
             
         </nav>

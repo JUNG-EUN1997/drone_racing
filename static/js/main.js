@@ -26,3 +26,11 @@ $('.swiper-slide').hover(function () {
 }, function () {
     swiper.autoplay.start();
 });
+
+function openNav() {
+    document.querySelector(".js-menu_content").classList.add("open");
+}
+
+function closeNav() {
+    document.querySelector(".js-menu_content").classList.remove("open");
+}

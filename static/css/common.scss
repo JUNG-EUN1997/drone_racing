@@ -1,4 +1,4 @@
-body{margin: 0;padding: 0;box-sizing: border-box; font-family:'NanumGothic', sans-serif; width: 100vw;}
+body{margin: 0;padding: 0;box-sizing: border-box; font-family:'NanumGothic', sans-serif; width: 100vw; overflow-x: hidden;}
 button,input,select,textarea{font-family:'NanumGothic', sans-serif; outline: none;}
 .dis-table,
 .dis-table-row{display: table;width:100%;border-spacing: 0; border-collapse: collapse;}
