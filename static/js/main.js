@@ -7,19 +7,18 @@ new Swiper('.js-news_swiper', {
     loop: true // 반복 재생 여부
 })
 
+let schedule_swiper_view = 3
+if (window.screen.width <= 768) {
+    schedule_swiper_view = 2
+}
+
 const swiper = new Swiper('.js-schedule_swiper', {
-    slidesPerView: 3,
+    slidesPerView: schedule_swiper_view,
     spaceBetween: 30,
     autoplay: true, // 자동 재생 여부
     loop: true
 })
 
-new Swiper('.js-partners_swiper', {
-    slidesPerView: 5,
-    spaceBetween: 30,
-    autoplay: true, // 자동 재생 여부
-    loop: true
-})
 
 $('.swiper-slide').hover(function () {
     swiper.autoplay.stop();

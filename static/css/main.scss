@@ -316,7 +316,7 @@ h1.more{
 
 @media (max-width: 768px) {
     html{
-        font-size: 50%;
+        font-size: 55%;
     }
     h1{
         margin: 8vw 0 3vw 0;
@@ -430,6 +430,9 @@ h1.more{
 
     .banner_wrap{
         .banner_area{
+            h2{
+                font-size: 4rem;
+            }
             >div{
                 flex-direction: column;
                 margin: 5vw 0;
@@ -446,7 +449,7 @@ h1.more{
                 padding: 16vw 3vw;
                 .btn_area{
                     a{
-                        
+                        padding: 1.5vw 4vw;
                     }
                 }
             }
